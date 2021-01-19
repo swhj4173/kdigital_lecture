@@ -1,0 +1,7 @@
+select o.country, count(*)
+from employees e
+inner join offices o
+on e.officeCode=o.officeCode
+group by o.country
+order by o.country 
+;

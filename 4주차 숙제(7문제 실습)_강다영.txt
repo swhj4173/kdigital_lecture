@@ -1,0 +1,47 @@
+select s.City, s.SupplierName, p.ProductName, p.Price
+from products p 
+inner join suppliers s
+on s.SupplierID=p.SupplierID
+where City='Tokyo' ;
+
+select c.CategoryName, p.ProductName
+from products p
+inner join categories c
+on c.CategoryID = p.CategoryID
+where CategoryName='Seafood' ;
+
+select s.Country, c.CategoryName, count(*), avg(p.Price)
+from products p
+inner join suppliers s
+on s.SupplierID = p.SupplierID 
+inner join categories c
+on p.CategoryID=c.CategoryID
+group by s.Country, c.CategoryName
+;
+
+select od.OrderID, c.CustomerName, e.LastName, s.ShipperName, count(*)
+from order_details od
+inner join orders o
+on od.OrderID=o.OrderID
+inner join customers c
+on c.CustomerID=o.CustomerID
+inner join employees e
+on e.EmployeeID=o.EmployeeID
+inner join shippers s
+on s.ShipperID=o.ShipperID
+group by od.OrderID
+;
+
+select c.Country, p.ProductName, sum(od.Quantity), sum(p.Price * od.Quantity)
+from products p
+inner join order_details od
+on p.ProductID=od.ProductID
+inner join orders o
+on o.OrderID=od.OrderID
+inner join customers c
+on c.CustomerID=o.CustomerID
+where c.Country = 'USA'
+group by p.ProductName
+order by sum(p.Price * od.Quantity) desc
+;
+
