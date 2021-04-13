@@ -1,0 +1,29 @@
+1. 제품명(product) 
+-> 제품 이름 통일(브랜드이름 포함해서 정리)
+    ex. '끌로에 오 드 퍼퓸' => '끌로에 EDP'
+
+2. 브랜드명(brand)
+-> 브랜드명은 한국어만!!!
+    ex. '끌로에(Chole)' => '끌로에'
+
+3. 성별(gender)
+-> 여성, 남성, 공용 (3가지로 분류)
+ex. 고체향수, 롤온 등 성별 없으면 공용으로 적용
+
+4. 리뷰(review) 
+-> 이모티콘 등 제거하고, 글자만 남도록 정리 
+
+5. 타입(type)
+-> PE - Parfum Extrait;
+    EDP - Eau de Parfum;
+    EDC - Eau de Cologne
+    EDT - Eau de Toilette
+    other
+
+    Extrait, Extrait de Parfum, Parfum 이거 세개가 같은거 
+    Eau de Parfum 얘가 다른거
+    Eau Fraiche, Aftershaves - 두개 동일
+
+6. 노트(note)
+
+7. 평점(rating)
